@@ -14,5 +14,6 @@ export class CardComponent {
   // card.component.ts - Add input for card with an interface corresponding to the deck items
   // card.component.ts - Remove unused properties - image and name
   // card.component.html - replace name and image with the passed in data
+  // card.component.html - replace flipped property with the passed in data
   // app.html - pass in data as "card" using property binding at itu-card
 }
