@@ -2,8 +2,9 @@
 <div style="text-align:center; width: 100%;">
   <itu-title></itu-title>
   <ul>
-    <!-- Solution: app.component.html - repeat card of deck and print out card name using interpolation -->
+    <!-- Solution: app.component.html - Repeat cards of 'deck' as list item (structual directive) -->
     <li *ngFor="let card of deck">
+      <!-- Solution: app.component.html - Print out card name as list content (interpolation) -->
       {{card.name}}
     </li>
   </ul>
