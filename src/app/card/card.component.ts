@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent {
-  flipped: true;
+  flipped = true;
   shield = 'url("../../assets/shield.svg")';
   image = '../../../../assets/viking_happy.svg';
   name = 'Happy viking';
