@@ -20,21 +20,13 @@ export class AppComponent implements OnInit {
     {"name": "Tongue", "image": "../../../../assets/viking_tongue.svg", "flipped": false}];
   ngOnInit() {}
 
-  // Exercise Adding game logic
-  // app.component.ts - Create new instance of 'Memorygame' with deck and assign it to the game property
-  // app.component.ts - Select card with 'selectCard' method from 'game'
-  // app.component.html - Replace the repeated deck with the deck from the game
-  // app.component.html - Create a button which on click starts the game by using 'startGame' method
-  // app.component.html - Use interpolation to set the text of the button 'Reset game' and 'Start game'
-  // app.component.html - Show attemps under the list of cards from the 'game'
-  // app.component.html - Show the game message under the list of cards from the 'game'
-  // app.component.html - Only show message and attemps if deck exists from the 'game'
   startGame() {
-    alert('start game');
+    // Solution: app.component.ts - Create new instance of 'Memorygame' with deck and assign it to the game property
+    this.game = new Memorygame(this.deck);
   }
 
   selectCard(card: Card) {
-    alert('card selected');
-    console.log('select card', card);
+    // Solution: app.component.ts - Select card with 'selectCard' method from 'game'
+    this.game.selectCard(card);
   }
 }

@@ -1,20 +1,25 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center; width: 100%;">
   <itu-title></itu-title>
-  <!-- Exercise Adding game logic-->
-  <!-- app.component.ts - Create new instance of 'Memorygame' with deck and assign it to the game property-->
-  <!-- app.component.ts - Select card with 'selectCard' method from 'game'-->
-  <!-- app.component.html - Replace the repeated deck with the deck from the game-->
-  <!-- app.component.html - Create a button which on click starts the game by using 'startGame' method-->
-  <!-- app.component.html - Use interpolation to set the text of the button 'Reset game' and 'Start game'-->
-  <!-- app.component.html - Show attemps under the list of cards from the 'game'-->
-  <!-- app.component.html - Show the game message under the list of cards from the 'game'-->
-  <!-- app.component.html - Only show message and attemps if deck exists from the 'game'-->
-  <ul>
-    <li *ngFor="let card of deck">
-      <!-- Solution: app.component.html - Pass down 'selectCard' method by 'select' (output) -->
-      <itu-card [card]="card" (select)="selectCard(card)"></itu-card>
-    </li>
-  </ul>
+
+  <!-- Solution: app.component.html - Create a button which on click starts the game by using 'startGame' method-->
+  <!-- Solution: app.component.html - Use interpolation to set the text of the button 'Reset game' and 'Start game'-->
+  <button (click)="startGame()">{{game?.deck ? 'Reset game' : 'Start game'}}</button>
+
+  <!-- Solution: app.component.html - Only show message and attemps if deck exists from the 'game'-->
+  <div *ngIf="game">
+    <ul>
+      <!-- Solution: app.component.html - Replace the repeated deck with the deck from the game-->
+      <li *ngFor="let card of game?.deck">
+        <!-- Solution: app.component.html - Pass down 'selectCard' method by 'select' (output) -->
+        <itu-card [card]="card" (select)="selectCard(card)"></itu-card>
+      </li>
+    </ul>
+    <!-- Solution: app.component.html - Show attemps under the list of cards from the 'game'-->
+    <h2>Attempts: {{game.attempts}}</h2>
+    <!-- Solution: app.component.html - Show the game message under the list of cards from the 'game'-->
+    <h2>{{game?.message}}</h2>
+  </div>
+
   <itu-background></itu-background>
 </div>
