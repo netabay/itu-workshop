@@ -4,11 +4,13 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 // @ts-ignore
 import {BackgroundComponent} from 'background';
+import {TitleComponent} from './title/title.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BackgroundComponent
+    BackgroundComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule
