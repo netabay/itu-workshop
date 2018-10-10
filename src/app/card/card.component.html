@@ -1,4 +1,5 @@
-<div class="card-container" [ngClass]="{'flipped': flipped}">
+<!-- Solution: card.component.html - replace flipped property with the passed in data-->
+<div class="card-container" [ngClass]="{'flipped': card.flipped}">
   <div class="card">
     <div class="front" [style.background]="shield">
       <!-- front content -->
@@ -6,12 +7,8 @@
     <div class="back" [style.background-image]="shield">
       <!-- back content -->
 
-      <!-- Exercise: Pass data into card component and use it in the template-->
-      <!-- card.component.ts - Add input for card with an interface corresponding to the deck items-->
-      <!-- card.component.ts - Remove unused properties - image and name-->
-      <!-- card.component.html - replace name and image with the passed in data-->
-      <!-- app.html - pass in data as "card" using property binding at itu-card-->
-      <img [src]="image" [alt]="name">
+      <!-- Solution: card.component.html - replace name and image with the passed in data-->
+      <img [src]="card.image" [alt]="card.name">
     </div>
   </div>
 </div>

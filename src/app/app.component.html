@@ -2,14 +2,9 @@
 <div style="text-align:center; width: 100%;">
   <itu-title></itu-title>
   <ul>
-    <!-- solution -->
     <li *ngFor="let card of deck">
-      <!-- Exercise: Pass data into card component and use it in the template-->
-      <!-- card.component.ts - Add input for card with an interface corresponding to the deck items-->
-      <!-- card.component.ts - Remove unused properties - image and name-->
-      <!-- card.component.html - replace name and image with the passed in data-->
-      <!-- app.html - pass in data as "card" using property binding at itu-card-->
-      <itu-card></itu-card>
+      <!-- Solution: app.component.html - pass in data as "card" using property binding at itu-card -->
+      <itu-card [card]="card"></itu-card>
     </li>
   </ul>
   <itu-background></itu-background>
