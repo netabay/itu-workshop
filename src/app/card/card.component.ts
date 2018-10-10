@@ -7,5 +7,7 @@ import {Card} from "./card";
 })
 export class CardComponent {
   shield = 'url("../../assets/shield.svg")';
+  // Solution: card.component.ts - Add input for card with an interface corresponding to the deck items
+  // Solution: card.component.ts - Remove unused properties - image and name
   @Input() card: Card;
 }
