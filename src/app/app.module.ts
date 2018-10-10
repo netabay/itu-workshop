@@ -5,12 +5,14 @@ import {AppComponent} from './app.component';
 // @ts-ignore
 import {BackgroundComponent} from 'background';
 import {TitleComponent} from './title/title.component';
+import {CardComponent} from "./card/card.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     BackgroundComponent,
-    TitleComponent
+    TitleComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule
