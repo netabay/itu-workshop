@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 // @ts-ignore
 import {Memorygame} from 'game';
+import {Card} from "./card/card";
 
 @Component({
   selector: 'itu-root',
@@ -18,4 +19,9 @@ export class AppComponent implements OnInit {
     {"name": "Surprised", "image": "../../../../assets/viking_surprised.svg", "flipped": false},
     {"name": "Tongue", "image": "../../../../assets/viking_tongue.svg", "flipped": false}];
   ngOnInit() {}
+
+  selectCard(card: Card) {
+    alert('card selected');
+    console.log('select card', card);
+  }
 }
