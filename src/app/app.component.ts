@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-// @ts-ignore
-import {Memorygame} from 'game';
+import {Memorygame} from "../../projects/game/src/lib/game";
 import {Card} from "./card/card";
 
 @Component({
