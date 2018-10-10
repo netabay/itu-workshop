@@ -3,13 +3,8 @@
   <itu-title></itu-title>
   <ul>
     <li *ngFor="let card of deck">
-      <!-- Solution: app.component.html - pass in data as "card" using property binding at itu-card -->
-      <itu-card [card]="card"></itu-card>
-      <!-- Exercise: Add event emitter (output) to emit when the card is selected-->
-      <!-- app.component.html - Pass down 'selectCard' method by 'select' (output)-->
-      <!-- card.component.ts - Add new event emitter 'select' (output)-->
-      <!-- card.component.ts - Emit 'select' with card as payload-->
-      <!-- card.component.html - Add click event and call onClick() method to emit event-->
+      <!-- Solution: app.component.html - Pass down 'selectCard' method by 'select' (output) -->
+      <itu-card [card]="card" (select)="selectCard(card)"></itu-card>
     </li>
   </ul>
   <itu-background></itu-background>
